@@ -41,15 +41,15 @@ public class StartPage extends TestBefore {
     }
 
     @Step("Проверка имени пользователя")
-    public void checkNameAccount() {
+    public void checkNameAccount(String name) {
         WebElement nameUser = menuUser.findElement(By.xpath("div[1]/div[2]/div[1]"));
-        Assert.assertEquals(nameUser.getAttribute("textContent"), "Почемучка В.");
+        Assert.assertEquals(nameUser.getAttribute("textContent"), name);
     }
 
     @Step("Проверка почты пользователя")
-    public void checkUserMenuEmail() {
+    public void checkUserMenuEmail(String email) {
         WebElement userMenuEmail = menuUser.findElement(By.xpath("div[1]/div[2]/div[2]"));
-        Assert.assertEquals(userMenuEmail.getAttribute("textContent"), "wewantGoT@yandex.ru");
+        Assert.assertEquals(userMenuEmail.getAttribute("textContent"), email);
     }
 
     @Step("Поиск подкатегории {1} в категории {0}")

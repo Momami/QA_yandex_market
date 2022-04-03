@@ -14,9 +14,10 @@ public class Test1 extends TestBefore {
         String password = "Aria_one_love";
         loginForm.enterPassword(password);
 
+        String name = "Почемучка В.";
         topPanel.findMenuUser();
-        topPanel.checkNameAccount();
-        topPanel.checkUserMenuEmail();
+        topPanel.checkNameAccount(name);
+        topPanel.checkUserMenuEmail(email);
     }
 }
 
